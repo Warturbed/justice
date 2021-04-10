@@ -1,0 +1,27 @@
+- var pageTitle = "Justice"
+
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    style
+        include styles/style.css
+  body
+    include components/header
+
+    section.section_banner
+      img(src="img/banner.png", alt="banner").section_banner_img
+      .container
+        .banner
+          h1.banner_title Zack Snyder's Justice League
+          .banner_info
+            span.banner_info_year 2021
+            span.banner_info_age 18+
+            span.banner_info_time 4h 2min
+            span.banner_info_rating 8.8
+          p.banner_text Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
+          .banner_control
+            button.banner_control_btn.banner_control_btn_main Watch
+            button.banner_control_btn.banner_control_btn_more More information
+
+    include components/footer
