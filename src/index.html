@@ -49,6 +49,10 @@ body {
   font-weight: 700;
 }
 
+.nav-link:hover {
+  color: white;
+}
+
 .nav-link::after {
   content: '';
   opacity: 0;
@@ -90,6 +94,7 @@ body {
   display: block;
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .control-btn_search {
@@ -108,6 +113,49 @@ body {
   background-image: url(img/profile.svg);
   width: 1.8rem;
   height: 1.92rem;
+}
+
+.section_h2 {
+  font-size: 2.8rem;
+  line-height: 2rem;
+  position: relative;
+  margin-top: 5.5rem;
+  margin-bottom: 4.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.section_h2::before {
+  content: '';
+  display: block;
+  width: 0.8rem;
+  height: 3.5rem;
+  border-radius: 5rem;
+  background: #326cff;
+  background: linear-gradient(160deg, #326cff 0%, #26fff2 35%);
+  position: absolute;
+  top: calc(50% - 1.7rem);
+  left: 0;
+}
+
+.section_h2::after {
+  content: '';
+  display: block;
+  width: 0.9rem;
+  height: 1.5rem;
+  background-image: url(img/arrow.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 0.7rem);
+}
+
+.section_h2_link {
+  color: #fff;
+  text-decoration: none;
 }
 
 .section_banner {
@@ -132,7 +180,7 @@ body {
 .banner {
   max-width: 56.2rem;
   padding-top: 12.2rem;
-  padding-bottom: 20.3rem;
+  padding-bottom: 21.4rem;
   background-color: #000;
   -webkit-box-shadow: 100px 0px 100px #000000;
           box-shadow: 100px 0px 100px #000000;
@@ -141,12 +189,15 @@ body {
 .banner_title {
   line-height: 7rem;
   font-size: 8rem;
+  margin-top: 0;
+  margin-bottom: 3.9rem;
 }
 
 .banner_text {
   color: #c2c2c2;
   font-size: 1.8rem;
   line-height: 2.8rem;
+  margin: 0;
 }
 
 .banner_info {
@@ -166,7 +217,7 @@ body {
 
 .banner_info_age {
   margin-right: 1.8rem;
-  border: 2px solid aquamarine;
+  border: 2px solid #26fff2;
   border-radius: 5rem;
   height: 2.4rem;
   width: 6rem;
@@ -201,13 +252,19 @@ body {
   padding: 1.5rem 3rem;
   font-weight: 800;
   margin-top: 3.1rem;
+  cursor: pointer;
 }
 
 .banner_control_btn_main {
   color: #fff;
-  background: #26b384;
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
   position: relative;
   padding-left: 6rem;
+}
+
+.banner_control_btn_main:hover {
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
 }
 
 .banner_control_btn_main::before {
@@ -225,6 +282,194 @@ body {
   color: #323232;
   background: #fff;
   margin-left: 2rem;
+}
+
+.banner_control_btn_more:hover {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.movies_link:hover {
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
+          filter: drop-shadow(0px 0px 20px rgba(44, 176, 249, 0.5));
+}
+
+.movies_btn {
+  color: #fff;
+  font-weight: 700;
+  padding: 1.5rem 3.4rem;
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+  border: 0;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin-top: 5.5rem;
+  margin-bottom: 10rem;
+}
+
+.movies_btn:hover {
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+}
+
+.genres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.genres_item {
+  margin-bottom: 2.7rem;
+}
+
+.actors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.actors_link {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.release_section {
+  margin-top: 12rem;
+  margin-bottom: 12.1rem;
+}
+
+.release {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.register_section {
+  margin-bottom: 12.1rem;
+}
+
+.register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 27rem;
+  width: 122.4rem;
+  background-image: url(img/registerbanner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.register_text {
+  font-size: 6.4rem;
+  font-weight: bold;
+  height: 12.8rem;
+  width: 79.2rem;
+  line-height: 6.4rem;
+}
+
+.register_btn {
+  color: #fff;
+  font-weight: 700;
+  padding: 1.5rem 3.4rem;
+  background: linear-gradient(316.53deg, #26fff2 13.2%, #326cff 71.54%);
+  border: 0;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.register_btn:hover {
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+}
+
+footer {
+  background-color: #101012;
+  height: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 111rem;
+  margin: 0 auto;
+}
+
+.footer_list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer_item {
+  padding-bottom: 1.5rem;
+}
+
+.footer_link {
+  color: #c2c2c2;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer_link:hover {
+  color: #fff;
+}
+
+.footer_img {
+  display: block;
+  margin-top: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
     </style>
@@ -266,9 +511,107 @@ body {
         </div>
       </div>
     </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="section_h2"><a class="section_h2_link" href="#">Trending TV Shows</a></h2>
+        <div class="movies">
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster1.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster2.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster3.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster4.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster5.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster6.png" alt=""></a></div>
+        </div>
+        <h2 class="section_h2"><a class="section_h2_link" href="#">Trending Movies</a></h2>
+        <div class="movies">
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster7.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster8.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster9.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster10.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster11.png" alt=""></a></div>
+          <div class="movies_item"><a class="movies_link" href="#"><img class="movies_img" src="img/poster12.png" alt=""></a></div>
+        </div>
+        <button class="movies_btn">See more</button>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2 class="section_h2"><a class="section_h2_link" href="#">Popular Genres</a></h2>
+        <div class="genres">
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre1.png" alt=""></a></div>
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre2.png" alt=""></a></div>
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre3.png" alt=""></a></div>
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre4.png" alt=""></a></div>
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre5.png" alt=""></a></div>
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre6.png" alt=""></a></div>
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre7.png" alt=""></a></div>
+          <div class="genres_item"><a class="genres_link" href="#"><img class="genres_img" src="img/genre8.png" alt=""></a></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container"> 
+        <h2 class="section_h2"><a class="section_h2_link" href="#">Popular Actors & Directors</a></h2>
+        <div class="actors"> 
+          <div class="actors_item"> <a class="actors_link" href="#"><img src="img/actor1.png" alt="">
+              <p class="actors_name">Samantha Bowen</p></a></div>
+          <div class="actors_item"> <a class="actors_link" href="#"><img src="img/actor2.png" alt="">
+              <p class="actors_name">Rhys Birch</p></a></div>
+          <div class="actors_item"> <a class="actors_link" href="#"><img src="img/actor3.png" alt="">
+              <p class="actors_name">James Holloway</p></a></div>
+          <div class="actors_item"> <a class="actors_link" href="#"><img src="img/actor4.png" alt="">
+              <p class="actors_name">Joshua Walton</p></a></div>
+          <div class="actors_item"> <a class="actors_link" href="#"><img src="img/actor5.png" alt="">
+              <p class="actors_name">Patrick Elliott</p></a></div>
+          <div class="actors_item"> <a class="actors_link" href="#"><img src="img/actor6.png" alt="">
+              <p class="actors_name">Morgan O'Neill</p></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="release_section">
+      <div class="container">
+        <div class="release"><a class="release_link" href="#"><img class="release_img" src="img/releasebanner.png" alt=""></a></div>
+      </div>
+    </section>
+    <section class="register_section">
+      <div class="container">
+        <div class="register">
+          <p class="register_text">Are You New Here ? <br/> Don’t wait, Register Now.</p>
+          <button class="register_btn">Register Now</button>
+        </div>
+      </div>
+    </section>
     <footer>
-      <div class="footer">
-        <h1>Подвал</h1>
+      <div class="footer"><a class="footer_img" href="#"><img src="img/logo.svg" alt=""></a>
+        <div class="footer_block">
+          <ul class="footer_list">
+            <li class="footer_item"> <a class="footer_link" href="#">Voice over and Subtitle</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Media Center</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Privacy</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer_block">
+          <ul class="footer_list">
+            <li class="footer_item"> <a class="footer_link" href="#">Voice Description</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Investor Relations</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Legal Provisions</a></li>
+          </ul>
+        </div>
+        <div class="footer_block">
+          <ul class="footer_list">
+            <li class="footer_item"> <a class="footer_link" href="#">Help Center</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Job Oppotunities</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Cookies Preferences</a></li>
+          </ul>
+        </div>
+        <div class="footer_block">
+          <ul class="footer_list">
+            <li class="footer_item"> <a class="footer_link" href="#">Gift Cards</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Tearms of Use</a></li>
+            <li class="footer_item"> <a class="footer_link" href="#">Corporate Informations</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
